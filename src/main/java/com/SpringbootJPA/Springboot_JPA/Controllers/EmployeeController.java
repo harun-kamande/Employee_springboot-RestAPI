@@ -1,15 +1,14 @@
 package com.SpringbootJPA.Springboot_JPA.Controllers;
 
 
-import com.SpringbootJPA.Springboot_JPA.Repository.EmployeeRepository;
-import com.SpringbootJPA.Springboot_JPA.Service.EmployeeService;
+import com.SpringbootJPA.Springboot_JPA.Service.employee.EmployeeService;
 import com.SpringbootJPA.Springboot_JPA.models.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/employee")
 public class EmployeeController {
 
     public EmployeeService employee_Service;
@@ -33,6 +32,8 @@ public class EmployeeController {
     public Employee get_single_employee(@PathVariable Long id){
         return employee_Service.get_single_employee(id);
     }
+
+
 
 
 

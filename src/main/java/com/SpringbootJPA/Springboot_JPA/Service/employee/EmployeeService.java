@@ -1,4 +1,4 @@
-package com.SpringbootJPA.Springboot_JPA.Service;
+package com.SpringbootJPA.Springboot_JPA.Service.employee;
 
 import com.SpringbootJPA.Springboot_JPA.models.Employee;
 
@@ -10,4 +10,5 @@ public interface EmployeeService {
 
     Employee save_new_employee(Employee employee);
     Employee get_single_employee(Long id);
+    List<Employee> delete_employee(Long id);
 }

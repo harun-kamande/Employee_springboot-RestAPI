@@ -19,9 +19,18 @@ public class Employee {
 //    To avoid returning sensitive information
     @JsonIgnore
     private Long id;
+    @Column(nullable = false)
     private String firstname;
+    @Column(nullable = false)
     private String secondname;
+    @Column(nullable = false)
     private String email;
+
+    @OneToOne
+    @JoinColumn(name = "employee_department")
+    private Department department;
+
+
 
     public Long getId() {
         return id;
