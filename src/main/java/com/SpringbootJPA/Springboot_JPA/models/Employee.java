@@ -26,7 +26,7 @@ public class Employee {
     @Column(nullable = false)
     private String email;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "employee_department")
     private Department department;
 
